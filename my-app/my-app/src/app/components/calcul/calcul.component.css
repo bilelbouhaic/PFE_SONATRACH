@@ -1,0 +1,48 @@
+
+.Container{
+   width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 70px;
+
+}
+
+.lastUpdates{
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    height: 75vh;
+    width: 90%;
+    
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
+
+}
+
+svg{
+    width: 20px;
+    height: auto;
+}
+.lastUpdates h2{
+    font-size: 20px;
+    color: #06153A;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+.lastUpdates h3{
+    font-size: 16px;
+    color: #045094;
+    font-weight: 500;
+    margin-bottom: 5px;
+   font-weight: 400px;
+
+   
+
+}
+.Elements{
+   margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}

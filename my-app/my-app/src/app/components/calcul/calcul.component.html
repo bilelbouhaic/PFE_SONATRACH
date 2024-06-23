@@ -1,0 +1,44 @@
+<app-myheader  [pageTitle]="'Calcul taxe'"></app-myheader>
+
+
+<section class="Container">
+    <div class="Buttons">
+        <ul>
+            <app-mybutton (click)="navigateToUpdate()" [buttonText]="'Mise a jour des donnees'"></app-mybutton>  
+            <app-mybutton (click)="togglePopup('popup')" [buttonText]="'Calculer redevance '"></app-mybutton> 
+            <app-mybutton (click)="togglePopup('trpPopup')"  [buttonText]="'Calculer TRP'"></app-mybutton>  
+            <app-mybutton (click)="togglePopup('bilanPopup')" [buttonText]="'Generer un bilan'"></app-mybutton> 
+        </ul>
+    </div>
+    
+    <div class="lastUpdates">
+        <h2>Vos dernieres modifications</h2>
+        <div class="Elements">
+            <app-last-update  [valeur]="lastUpdateData.tauxChange"  [subTitle]="'Taux de change'"     [couleur]="'#18A0FB'"/> 
+            
+        </div>
+        <br>
+        <h3>Prix d'exportation :</h3> 
+        <div class="Elements">
+            <app-last-update [valeur]="lastUpdateData.prixBPetrole"   [subTitle]="'Petrole'"       [couleur]="'#BDBDBD'"/>
+            <app-last-update [valeur]="lastUpdateData.prixBGaz"   [subTitle]="'Gaz'"          [couleur]="'#BDBDBD'"/> 
+            <app-last-update [valeur]="lastUpdateData.prixBCondensat"   [subTitle]="'Condensat'"    [couleur]="'#BDBDBD'"/>
+            <app-last-update [valeur]="lastUpdateData.prixBGpl"   [subTitle]="'Gpl'"          [couleur]="'#BDBDBD'"/> 
+        </div>
+       
+        <h3>Etat de production :</h3>
+        <div class="Elements">       
+            <app-last-update [valeur]="'2024-04-15'"   [subTitle]="'Etat P1 Provisoir'"     [couleur]="'#FFF3B2'"/>
+            <app-last-update [valeur]="'2024-05-10'"   [subTitle]="'Etat P1 Definitif'"     [couleur]="'#06AA00'"/> 
+          
+        </div>
+        
+    </div>
+    
+</section>
+<app-popup-rdv *ngIf="isPopupVisible" (close)="closePopup('popup')"></app-popup-rdv>
+<app-popup-trp *ngIf="isTrpPopupVisible" (close)="closePopup('trpPopup')"></app-popup-trp>
+<app-popup-bilan *ngIf="isBilanPopupVisible" (close)="closePopup('bilanPopup')"></app-popup-bilan>
+
+
+

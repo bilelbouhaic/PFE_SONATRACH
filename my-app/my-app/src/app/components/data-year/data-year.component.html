@@ -1,0 +1,17 @@
+<app-myheader  [pageTitle]="'Mise a jour donnees'"></app-myheader>
+
+    <section class="Container">
+    <div class="Buttons">
+        <app-mybutton (click)="togglePopup('prixMnPopup')" [buttonText]="'Prix marche nationale hydrocarbure'"></app-mybutton>
+    <app-mybutton (click)="togglePopup('TransPopup')" [buttonText]="'Tarif de transport'"></app-mybutton>
+  </div>
+
+  
+  <app-popup-prix-mn *ngIf="isPrixMnVisible" (close)="closePopup('prixMnPopup')"></app-popup-prix-mn>
+  <app-popup-tarif-trans *ngIf="istarifTransVisible" (close)="closePopup('TransPopup')"></app-popup-tarif-trans>
+  
+    
+    
+</section>
+
+

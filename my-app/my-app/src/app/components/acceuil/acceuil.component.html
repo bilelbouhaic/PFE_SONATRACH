@@ -1,0 +1,31 @@
+<section>
+<app-myheader [pageTitle]="'Analyse fiscalite'"></app-myheader>
+
+<!-- app.component.html -->
+<div class="filter">
+  <input type="date" [(ngModel)]="selectedDate" (ngModelChange)="onDateChange($event)" />
+  <button (click)="generatePdf()">Telecharger un rapport &nbsp;&nbsp;<fa-icon [icon]="download"></fa-icon></button>
+</div>
+<div class="kpi">
+  <div>
+    <h1>{{kpi1}} </h1>
+    <h2>Somme des taxes mensuelle</h2>
+  </div>
+  <div>
+    <h1>{{kpi2}} %</h1>
+    <h2>Taux de taxe moyen</h2>
+  </div>
+  <div>
+    <h1>{{kpi3}}%</h1>
+    <h2>Ratio rentabilite</h2>
+  </div>
+</div>
+<div class="container">
+  <div class="chart">
+    <app-perimetre-rentable></app-perimetre-rentable>
+  </div>
+  <div class="chart">
+    <app-perimetre-taxe></app-perimetre-taxe>
+  </div>
+</div>
+</section>

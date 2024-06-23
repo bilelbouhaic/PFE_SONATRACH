@@ -1,0 +1,23 @@
+<section>
+  <div class="content" role="main">
+    <img src="../../../assets/Pictures/sonatrach.png" alt="">
+    
+    <div>
+      <label for="email">Email</label>
+      <input id="email" [(ngModel)]="registerDto.email" name="email" required type="email" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" [(ngModel)]="registerDto.password" name="password" required type="password" />
+    </div>
+    <div>
+      <label for="role">Role</label>
+      <select id="role" [(ngModel)]="registerDto.role" name="role">
+        <option value="Fiscaliste">Fiscaliste</option>
+        <option value="Admin">Admin</option>
+        <option value="User">User</option>
+      </select>
+    </div>
+    <button (click)="register(registerDto)">S'inscrire</button>
+  </div>
+</section>

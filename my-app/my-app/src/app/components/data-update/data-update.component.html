@@ -1,0 +1,15 @@
+<app-myheader  [pageTitle]="'Mise a jour donnees'"></app-myheader>
+
+    <section class="Container">
+    <div class="Buttons">
+
+        <ul>
+            <app-mybutton (click)="navigateToMonth()" [buttonText]="'Donnees mensuelles'"></app-mybutton>  
+            <app-mybutton (click)="navigateToYear()" [buttonText]="'Donnees annuelles'"></app-mybutton>  
+            <app-mybutton (click)="navigateToInvest()" [buttonText]="'investissements'"></app-mybutton>  
+        </ul>
+    </div>
+    
+</section>
+
+

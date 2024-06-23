@@ -1,0 +1,29 @@
+.w-custom-1 {
+    width: 20%; /* par exemple */
+  }
+  
+  .w-custom-2 {
+    width: 20%; /* même largeur que la colonne 1 */
+  }
+  
+  .w-custom-3 {
+    width: 20%; /* même largeur que les colonnes 1 et 2 */
+  }
+  
+  .w-custom-4 {
+    width: 20%; /* même largeur que les colonnes 1, 2 et 3 */
+  }
+  
+  .w-custom-5 {
+    width: 20%; /* même largeur que les colonnes 1, 2, 3 et 4 */
+  }
+  .colorPurple{
+    color: #4547A9;
+  }
+  .buttonTable{
+    background-color: #4547A9;
+    color: white;
+    font-weight: 500;
+border-radius: 5px;
+    padding: 10px;
+  }

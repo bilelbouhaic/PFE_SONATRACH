@@ -1,0 +1,22 @@
+<!-- login.component.html -->
+<section>
+  <div class="content" role="main">
+    <img src="../../../assets/Pictures/sonatrach.png" alt="Logo Sonatrach">
+
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" id="email" [(ngModel)]="loginDto.email" required><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" [(ngModel)]="loginDto.password" required><br>
+
+      <button (click)="login()">Connexion</button>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <br>
+  </div>
+</section>

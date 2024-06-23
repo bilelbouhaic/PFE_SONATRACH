@@ -1,0 +1,17 @@
+<app-myheader [pageTitle]="'Mise a jour donnees'"></app-myheader>
+
+<section class="Container">
+  <div class="Buttons">
+    <app-mybutton (click)="togglePopup('prixExPopup')" [buttonText]="'Prix exportation hydrocarbure'"></app-mybutton>
+    <app-mybutton (click)="togglePopup('tauxCHPopup')" [buttonText]="'Taux de change'"></app-mybutton>
+
+    <app-mybutton (click)="togglePopup('p1defPopup')" [buttonText]="'Inserer etat P1 definitif'"></app-mybutton>
+    <app-mybutton (click)="togglePopup('p1provPopup')" [buttonText]="'Inserer etat P1 provisoire'"></app-mybutton>
+  </div>
+
+  <app-popup-prix-exp *ngIf="isPrixExVisible" (close)="closePopup('prixExPopup')"></app-popup-prix-exp>
+  <app-popup-taux-ch *ngIf="isTauxCHVisible" (close)="closePopup('tauxCHPopup')"></app-popup-taux-ch>
+  
+  <app-popup-p1def *ngIf="isP1defVisible" (close)="closePopup('p1defPopup')"></app-popup-p1def>
+  <app-popup-p1prov *ngIf="isP1provVisible" (close)="closePopup('p1provPopup')"></app-popup-p1prov>
+</section>

@@ -1,0 +1,39 @@
+<!-- popup-dialog.component.html -->
+
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div class="popupContainer">
+      <!-- Your popup content here -->
+     
+      
+          <h1 class="popupH1">Previsions annuelles d'investissement de :</h1>
+          <hr class="popupHr">
+          <form class="popupForm" action="">
+            
+            <div class="popupDiv">
+            <p class="popupP">Recherche et developement</p>
+            <input class="popupInput" type="text" name="montantInvest" [(ngModel)]="montantInvestRD" />
+          </div>
+          <div class="popupDiv">
+            <p class="popupP">Recuperation assiste</p>
+            <input class="popupInput" type="text" name="montantInvest" [(ngModel)]="montantInvestRA" />
+          </div>
+          <div class="popupDiv">
+            <p class="popupP">Frais de formation RH</p>
+            <input class="popupInput" type="text" name="montantInvest" [(ngModel)]="montantInvestFF" />
+          </div>
+          
+          <div class="popupButtonContainer">
+              <button class="popupButtonAnnuler" (click)="closePopup()">Annuler</button>
+              <button class="popupButton" (click)="onSubmit()"
+              
+              >Mettre a jour</button>
+              
+          </div>
+            
+          </form>
+      
+       
+        
+    </div>
+  </div>
+  

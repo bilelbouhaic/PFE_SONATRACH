@@ -1,0 +1,22 @@
+header{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    align-items: center;
+    color: #06153A;
+
+}
+header h1{
+    font-size: 28px;
+    font-weight: 700;
+}
+img{
+    width: 50px;
+    height: auto;
+    text-align: end;
+    margin-left: 40px
+    
+}

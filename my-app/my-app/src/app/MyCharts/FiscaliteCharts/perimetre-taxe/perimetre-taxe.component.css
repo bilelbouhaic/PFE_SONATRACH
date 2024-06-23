@@ -1,0 +1,10 @@
+h1{
+    font-size: large;
+    font-weight: bold;
+}
+#chart-container {
+    width: 300px; /* Set the width you desire */
+    height: 300px; /* Set the height you desire */
+    position: relative; /* Ensure the canvas is positioned relative to its container */
+  }
+  

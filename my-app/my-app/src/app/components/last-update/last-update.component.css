@@ -1,0 +1,36 @@
+.Update{
+    display: grid;
+    grid-template-columns: 30% 70%;
+   
+   
+    
+}
+span{
+    background-color: #c388f670;
+    border-radius: 10px ;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex; /* Optionally, use Flexbox for the inner div */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center;
+    text-align: center;
+    color: "#c388f670";
+
+}
+.Update div{
+
+}
+h4{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+h5{
+    color: #92959E;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    
+}

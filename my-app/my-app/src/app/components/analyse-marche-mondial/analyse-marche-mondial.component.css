@@ -1,0 +1,50 @@
+.chart{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+   
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    grid-gap: 30px;
+}
+
+.chart2{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    
+   
+
+}
+
+.filter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+button{
+    background-color: #4547A9;
+    color: white;
+    font-weight: 500;
+border-radius: 5px;
+    padding: 10px;
+}
+input{
+    border: solid 1px #DFE7EF;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,60 @@
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #EEEFFB
+  }
+  
+  .content {
+    text-align: center; /* Optional: align content in the center */
+    border: 3px #DFE7EF solid;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    padding: 40px;
+    width: 30%;
+    margin: auto;
+    top: 400px;
+    
+    
+  }
+  .content img {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+input{
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+}
+
+
+button{
+    background-color: #4547A9;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+}
+h1{
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+img{
+    text-align: center;
+}
+a{
+  color: #4547A9;
+  font-weight: 600;
+}
+  
+  

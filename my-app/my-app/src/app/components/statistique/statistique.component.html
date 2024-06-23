@@ -1,0 +1,20 @@
+<app-myheader [pageTitle]="'Analyse production'"></app-myheader>
+
+<section>
+  <!-- app.component.html -->
+  <div class="container">
+    <input type="date" [(ngModel)]="selectedDate" (ngModelChange)="onDateChange($event)" />
+    <button (click)="generatePdf()">Telecharger un rapport &nbsp;&nbsp;<fa-icon [icon]="download"></fa-icon></button>
+
+
+    <div class="chart">
+      <app-qte-produite-produit></app-qte-produite-produit>
+    </div>
+    <div class="chart">
+      <app-qte-produite-perimetre></app-qte-produite-perimetre>
+    </div>
+  </div>
+  <div class="chart2">
+    <app-qte-produite-temperature></app-qte-produite-temperature>
+  </div>
+</section>

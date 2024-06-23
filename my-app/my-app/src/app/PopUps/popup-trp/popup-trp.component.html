@@ -1,0 +1,31 @@
+<!-- popup-dialog.component.html -->
+
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div class="popupContainer">
+      <!-- Your popup content here -->
+     
+      
+          <h1 class="popupH1">Calcul TRP</h1>
+          <hr class="popupHr">
+          <form class="popupForm" action="">
+            <div class="popupDiv">
+              <p class="popupP">Taux de TRP</p>
+              <input type="text" class="popupInput" [(ngModel)]="tauxTrp" name="tauxTrp" required >
+            </div>
+            <div class="popupDiv">
+            <p class="popupP">Periode en cours</p>
+            <input class="popupInput" type="date" [(ngModel)]="currentDate" name="currentDate" required />
+          </div>
+          <div class="popupButtonContainer">
+              <button class="popupButtonAnnuler" (click)="closeTrpPopup()">Fermer</button>
+         
+              <button class="popupButton"(click)="calculateTrp()">Calculer l'accompte TRP</button>
+          </div>
+            
+          </form>
+      
+       
+        
+    </div>
+  </div>
+  

@@ -1,0 +1,42 @@
+<!-- popup-dialog.component.html -->
+
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div class="popupContainer">
+        <h1 class="popupH1">Prix Marche National </h1>
+        <hr class="popupHr">
+        <form class="popupForm" >
+            
+            <div class="popupDiv">
+                <p class="popupP">Pétrole</p>
+                <input class="popupInput" type="number" name="petrolePrice" id="petrolePrice" [(ngModel)]="petrolePrice" required />
+                <input type="hidden" name="petroleProductId" value="1" />
+            </div>
+            <div class="popupDiv">
+                <p class="popupP">Gaz</p>
+                <input class="popupInput" type="number" name="gazPrice" id="gazPrice" [(ngModel)]="gazPrice" required />
+                <input type="hidden" name="gazProductId" value="2" />
+            </div>
+            <div class="popupDiv">
+                <p class="popupP">Condensat</p>
+                <input class="popupInput" type="number" name="condensatPrice" id="condensatPrice" [(ngModel)]="condensatPrice" required />
+                <input type="hidden" name="condensatProductId" value="3" />
+            </div>
+            <div class="popupDiv">
+                <p class="popupP">GPL</p>
+                <input class="popupInput" type="number" name="gplPrice" id="gplPrice" [(ngModel)]="gplPrice" required />
+                <input type="hidden" name="gplProductId" value="4" />
+            </div>
+          
+            <div class="popupButtonContainer">
+                <button class="popupButtonAnnuler" (click)="closePopup()">Annuler</button>
+                <button class="popupButton" (click)="sendData()">Mettre à jour</button>
+            </div>
+          
+            
+            <div *ngIf="successMessage" class="popupMessage success">{{ successMessage }}</div>
+            <div *ngIf="errorMessage" class="popupMessage error">{{ errorMessage }}</div>
+
+        </form>
+    </div>
+  </div>
+  

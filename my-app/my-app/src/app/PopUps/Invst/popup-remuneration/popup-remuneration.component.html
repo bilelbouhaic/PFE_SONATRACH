@@ -1,0 +1,46 @@
+<!-- popup-dialog.component.html -->
+
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div class="popupContainer">
+      <!-- Your popup content here -->
+     
+      
+          <h1 class="popupH1">Remuneration Mensuelles des Associe </h1>
+          <hr class="popupHr">
+          <form class="popupForm" action="">
+            
+            <div class="popupDiv">
+            <p class="popupP">Petrole</p>
+            <input class="popupInput" type="text" name="" id="" />
+          </div>
+          <div class="popupDiv">
+            <p class="popupP">Gaz sec</p>
+            <input class="popupInput" type="text" name="" id="" />
+          </div>
+          <div class="popupDiv">
+            <p class="popupP">Condensat</p>
+            <input class="popupInput" type="text" name="" id="" />
+          </div>
+          <div class="popupDiv">
+            <p class="popupP">GPL</p>
+            <input class="popupInput" type="text" name="" id="" />
+          </div>
+
+          <div class="popupDiv">
+            <p class="popupP">Periode en cours</p>
+            <input class="popupInput" type="text" [(ngModel)]="currentDate" [value]="currentDate" />
+          </div>
+          
+          <div class="popupButtonContainer">
+              <button class="popupButtonAnnuler" (click)="closePopup()">Annuler</button>
+              <button class="popupButton">Mettre a jour</button>
+              
+          </div>
+            
+          </form>
+      
+       
+        
+    </div>
+  </div>
+  

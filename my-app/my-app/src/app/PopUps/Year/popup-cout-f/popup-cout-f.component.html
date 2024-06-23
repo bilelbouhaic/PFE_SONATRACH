@@ -1,0 +1,27 @@
+<!-- popup-cout-f.component.html -->
+
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+  <div class="popupContainer">
+    <h1 class="popupH1">Coût de transport</h1>
+    <hr class="popupHr">
+    <form class="popupForm" >
+      <div class="popupDiv">
+        <p class="popupP">GNL</p>
+        <input class="popupInput" type="text" name="montantInvest" [(ngModel)]="montantInvestGnl" />
+      </div>
+      <div class="popupDiv">
+        <p class="popupP">GPL</p>
+        <input class="popupInput" type="text" name="montantInvest" [(ngModel)]="montantInvestGpl" />
+      </div>
+      <div class="popupDiv">
+        <p class="popupP">Période en cours</p>
+        <input class="popupInput" type="text" [(ngModel)]="currentDate" [value]="currentDate" />
+      </div>
+      <div class="popupButtonContainer">
+        <button class="popupButtonAnnuler" (click)="closePopup()">Annuler</button>
+        <button  class="popupButton" (click)="onSubmit()">Mettre à jour</button>
+      </div>
+    </form>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<app-myheader [pageTitle]="'Mise a jour donnees'"></app-myheader>
+
+<section class="Container">
+  <div class="Buttons">
+    <app-mybutton (click)="togglePopup('previsonAnnuellePopup')" [buttonText]="'Previsions Annuelles'"></app-mybutton>
+    <app-mybutton (click)="togglePopup('remunerationPopup')" [buttonText]="'Remuneration mensuelles des Associes '"></app-mybutton>
+    <app-mybutton (click)="togglePopup('imposRemuPopup')" [buttonText]="'Impos sur Remuneration des associes'"></app-mybutton>
+    <app-mybutton (click)="togglePopup('qteGazPopup')" [buttonText]="'Quantite GAZ Achete'"></app-mybutton>
+    <app-mybutton (click)="togglePopup('coutPopup')" [buttonText]="'Cout de faconnage'"></app-mybutton>
+  </div>
+
+  <app-popup-previsions-annuelles *ngIf="isPrevisionAnnuelle" (close)="closePopup('previsonAnnuellePopup')"></app-popup-previsions-annuelles >
+  <app-popup-remuneration *ngIf="isRemuneration" (close)="closePopup('remunerationPopup')"></app-popup-remuneration>
+  <app-popup-impos-remu *ngIf="isImposRemu" (close)="closePopup('imposRemuPopup')"></app-popup-impos-remu>
+  <app-popup-qte-gaz *ngIf="isQteGazAchete" (close)="closePopup('qteGazPopup')"></app-popup-qte-gaz >
+  <app-popup-cout-f *ngIf="isCoutVisible" (close)="closePopup('coutPopup')"></app-popup-cout-f>
+</section>

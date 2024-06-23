@@ -1,0 +1,23 @@
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+  <div class="popupContainer">
+      <h1 class="popupH1">Générer un bilan</h1>
+      <hr class="popupHr">
+      <form class="popupForm" (ngSubmit)="imprimerBilan()">
+          <div class="popupDiv">
+              <p class="popupP">Taxe</p>
+              <select class="popupInput" [(ngModel)]="selectedType" name="type" required>
+                  <option value="Redevance">Redevance</option>
+                  <option value="TRP">TRP</option>
+              </select>
+          </div>
+          <div class="popupDiv">
+              <p class="popupP">Période en cours</p>
+              <input class="popupInput" type="date" [(ngModel)]="selectedDate" name="date" required />
+          </div>
+          <div class="popupButtonContainer">
+              <button class="popupButtonAnnuler" type="button" (click)="closeBilanPopup()">Annuler</button>
+              <button class="popupButton" type="submit">Imprimer un bilan</button>
+          </div>
+      </form>
+  </div>
+</div>

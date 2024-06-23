@@ -1,0 +1,8 @@
+h1{
+    font-size: large;
+    font-weight: bold;
+}
+#chart-container {
+    /* Ensure the canvas is positioned relative to its container */
+  }
+  

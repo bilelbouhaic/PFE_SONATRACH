@@ -1,0 +1,32 @@
+<Section class="Sidebar">
+  <ul>
+    <li routerLinkActive="Active">
+      <a class="colorr" routerLink="Calcul">
+        <fa-icon [icon]="calcul"></fa-icon> &nbsp;&nbsp; &nbsp;Calcul taxe</a>
+    </li>
+    <li routerLinkActive="Active">
+      <a class="colorr" routerLink="Redevance">
+        <fa-icon [icon]="rdv"></fa-icon> &nbsp;&nbsp; &nbsp;Taxe Redevance</a>
+    </li>
+    <li routerLinkActive="Active">
+      <a class="colorr" routerLink="Trp">
+        <fa-icon [icon]="trp"></fa-icon> &nbsp;&nbsp; &nbsp;Taxe TRP</a>
+    </li>
+    <li routerLinkActive="Active">
+      <a class="colorr" routerLink="Statistique">
+        <fa-icon [icon]="Oil"></fa-icon> &nbsp;&nbsp; &nbsp; Analyse de la production</a>
+    </li>
+    <li routerLinkActive="Active">
+      <a class="colorr" routerLink="Acceuil">
+        <fa-icon [icon]="dollar"></fa-icon> &nbsp;&nbsp; &nbsp;Analyse de la fiscalite
+      </a>
+    </li>
+    <li routerLinkActive="Active">
+      <a class="colorr" routerLink="Analyse">
+        <fa-icon [icon]="stat"></fa-icon> &nbsp;&nbsp; &nbsp;Analyse du marche
+      </a>
+    </li>
+  </ul>
+  <!-- Logout button with Angular event binding -->
+  <button (click)="logout()">Se deconnecter &nbsp;&nbsp; &nbsp; <fa-icon [icon]="logoutt"></fa-icon> </button>
+</Section>

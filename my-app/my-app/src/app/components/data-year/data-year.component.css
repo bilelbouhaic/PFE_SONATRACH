@@ -1,0 +1,36 @@
+.Container{
+    width: 90%;
+    margin: auto;
+    
+}
+.myButton{
+    width: 90%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+    color: #06153A;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.myButton a{
+    color: #06153A;
+}
+
+.lastUpdates{
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    height: 60vh;
+    width: 80%;
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.10);
+
+}
+.lastUpdates h2{
+    font-size: 22px;
+}
+
