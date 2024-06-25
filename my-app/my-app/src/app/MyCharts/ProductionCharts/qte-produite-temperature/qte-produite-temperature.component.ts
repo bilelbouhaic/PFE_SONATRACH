@@ -30,6 +30,7 @@ export class QteProduiteTemperatureComponent implements OnInit {
       const MeteoAdrar = response4[0];
       const MeteoLaghouat = response5[0];
       const MeteoIllizi = response6[0];
+console.log(Adrar);
 
       this.data = {
         labels: [
@@ -49,7 +50,7 @@ export class QteProduiteTemperatureComponent implements OnInit {
         datasets: [
           {
             label: 'Adrar',
-            data: Adrar,
+            data: [1199053,1197053,1200053,1190053,1189053,1169053,1170053,1177053,1184053,1191053,1199053,1199053],
             yAxisID: 'y-axis-2',
             borderColor: '#8183F4',
             backgroundColor: '#8183F4',

@@ -14,6 +14,9 @@ export class SubscribtionComponent {
   registerDto: Register = new Register();
   loginDto: Login = new Login();
   jwtDto: JwtAuth = new JwtAuth();
+  
+  successMessage: string = '';
+  errorMessage: string = '';
 
   constructor(private authService: AuthenticationService, private router: Router) {}
 
@@ -21,13 +24,16 @@ export class SubscribtionComponent {
     this.authService.register(registerDto).subscribe(
       response => {
         console.log('Registration successful', response);
-        // Handle successful registration, e.g., navigate to login
+        this.successMessage = 'Inscription réussi!';
+        this.errorMessage = '';
+        // Optionally navigate to another page after a successful registration
+        // this.router.navigate(['/login']);
       },
       error => {
         console.error('Registration error', error);
-        // Handle registration error, e.g., show error message
+        this.errorMessage = "Échec de l'enregistrement. Veuillez réessayer.";
+        this.successMessage = '';
       }
     );
   }
-
 }

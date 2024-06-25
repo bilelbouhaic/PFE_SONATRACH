@@ -27,7 +27,7 @@ export class DataYearComponent {
 
   closePopup(popupType: string) {
     switch (popupType) {
-      case 'prixMN':
+      case 'prixMnPopup':
         this.isPrixMnVisible = false;
         break;
       
@@ -38,4 +38,5 @@ export class DataYearComponent {
         break;
     }
   }
+  
 }

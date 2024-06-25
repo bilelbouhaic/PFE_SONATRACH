@@ -1,8 +1,6 @@
 
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     height: 100%;
     background-color: #EEEFFB
   }
@@ -14,7 +12,7 @@ section {
     border-radius: 20px;
     text-align: left;
     padding: 40px;
-    width: 30%;
+    width: 70%;
     margin: auto;
     top: 400px;
     
@@ -25,7 +23,7 @@ section {
     margin: 0 auto; /* Center the image horizontally */
   }
   
-input{
+input,select{
     border: 1px black solid;
     padding: 5px;
     border-radius: 5px;
@@ -57,4 +55,12 @@ a{
   font-weight: 600;
 }
   
-  
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

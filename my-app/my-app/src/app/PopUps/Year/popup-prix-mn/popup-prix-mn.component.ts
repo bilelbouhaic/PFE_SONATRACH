@@ -26,23 +26,23 @@ export class PopupPrixMNComponent {
     const data = [
       {
         produitId: 1,
-        prixBase: this.petrolePrice,
-        dateModificationPb: new Date().toISOString()
+        prixMn: this.petrolePrice,
+        datemodificationPm: new Date().toISOString()
       },
       {
         produitId: 2,
-        prixBase: this.gazPrice,
-        dateModificationPb: new Date().toISOString()
+        prixMn: this.gazPrice,
+        datemodificationPm: new Date().toISOString()
       },
       {
         produitId: 3,
-        prixBase: this.condensatPrice,
-        dateModificationPb: new Date().toISOString()
+        prixMn: this.condensatPrice,
+        datemodificationPm: new Date().toISOString()
       },
       {
         produitId: 4,
-        prixBase: this.gplPrice,
-        dateModificationPb: new Date().toISOString()
+        prixMn: this.gplPrice,
+        datemodificationPm: new Date().toISOString()
       }
     ];
     

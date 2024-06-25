@@ -30,6 +30,7 @@ const routes: Routes = [
     children: [
       { path: 'Acceuil', component: AcceuilComponent ,canActivate: [RoleGuard],  data: { roles: ['Admin'] }  },
       { path: 'Statistique', component: StatistiqueComponent, canActivate: [RoleGuard],  data: { roles: ['Admin'] }  },
+      { path: 'AjoutCompte', component: SubscribtionComponent , canActivate: [RoleGuard],  data: { roles: ['Admin'] } },
       { path: 'Calcul', component: CalculComponent },
       { path: 'Update', component: DataUpdateComponent },
       { path: 'Month', component: DataMonthComponent },

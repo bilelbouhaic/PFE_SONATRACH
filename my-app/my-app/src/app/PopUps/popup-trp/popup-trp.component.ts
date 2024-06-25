@@ -8,8 +8,8 @@ import { MyTrpService } from './popup-trp.service';
 })
 export class PopupTrpComponent {
   @Output() close = new EventEmitter<void>();
-
   currentDate: string;
+  currentDate1: string;
   tauxTrp: number | null = null; 
   successMessage: string = '';
   errorMessage: string = '';
@@ -18,9 +18,10 @@ export class PopupTrpComponent {
   constructor(private myService: MyTrpService) {
     const date = new Date();
     const year = date.getFullYear();
-    const month = ('0' + (date.getMonth() + 1)).slice(-2); // Ajoute un zéro devant si le mois est inférieur à 10
-    const day = 16;
+    const month = ('0' + (date.getMonth() )).slice(-2); // Ajoute un zéro devant si le mois est inférieur à 10
+    const day = 10;
     this.currentDate = `${year}-${month}-${day}`;
+    this.currentDate1 = `${year}-${month}`;
   }
   closeTrpPopup() {
     this.close.emit();
@@ -28,10 +29,10 @@ export class PopupTrpComponent {
 
   calculateTrp() {
 
-    if (!this.isDateValid()) {
-      alert('Délai dépassé. Impossible de calculer TRP.');
-      return;
-    }
+    // if (!this.isDateValid()) {
+    //   alert('Délai dépassé. Impossible de calculer TRP.');
+    //   return;
+    // }
     const data = {
       tauxRdv: this.tauxTrp,
       dateRdv: this.currentDate,

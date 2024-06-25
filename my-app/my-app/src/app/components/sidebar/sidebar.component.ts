@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faHome, faChartLine, faCalculator, faChartSimple, faOilWell, faCircleDollarToSlot, faFileInvoiceDollar, faFileArrowDown, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faChartLine, faCalculator, faChartSimple, faOilWell, faCircleDollarToSlot, faFileInvoiceDollar, faFileArrowDown, faRightFromBracket, faAdd } from '@fortawesome/free-solid-svg-icons';
 import { AuthenticationService } from '../../authentication.service';
 import { Router } from '@angular/router';
 
@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  logoutt=faRightFromBracket;
+  add = faAdd;
+  logoutt = faRightFromBracket;
   home = faHome;
   stat = faChartLine;
   calcul = faCalculator;
@@ -19,7 +20,15 @@ export class SidebarComponent {
   trp = faFileInvoiceDollar;
   rdv = faFileArrowDown;
 
+  isAdmin: boolean = false; // Flag to check if user is admin
+
   constructor(private authService: AuthenticationService, private router: Router) { }
+
+  ngOnInit(): void {
+    const userRole = this.authService.getUserRole();
+    this.isAdmin = userRole === 'Admin'; // Vérifiez que isAdmin est correctement défini en fonction du rôle
+  }
+  
 
   logout() {
     this.authService.logout();

@@ -1154,3 +1154,4 @@ C:\Users\DELL\OneDrive\Bureau\MONPFE-main\BackendApiv5\BackendApi\api\obj\Debug\
 C:\Users\DELL\OneDrive\Bureau\MONPFE-main\BackendApiv5\BackendApi\api\obj\Debug\net8.0\api.pdb
 C:\Users\DELL\OneDrive\Bureau\MONPFE-main\BackendApiv5\BackendApi\api\obj\Debug\net8.0\api.genruntimeconfig.cache
 C:\Users\DELL\OneDrive\Bureau\MONPFE-main\BackendApiv5\BackendApi\api\obj\Debug\net8.0\ref\api.dll
+C:\Users\DELL\OneDrive\Bureau\MONPFE-main\BackendApiv5\BackendApi\api\obj\Debug\net8.0\api.sourcelink.json

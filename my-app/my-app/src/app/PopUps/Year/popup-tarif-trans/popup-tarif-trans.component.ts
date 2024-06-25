@@ -23,23 +23,23 @@ export class PopupTarifTransComponent {
     const data = [
       {
         produitId: 1,
-        prixBase: this.petrolePrice,
-        dateModificationPb: new Date().toISOString()
+        tarifTransport: this.petrolePrice,
+        dateModificationTt: new Date().toISOString()
       },
       {
         produitId: 2,
-        prixBase: this.gazPrice,
-        dateModificationPb: new Date().toISOString()
+        tarifTransport: this.gazPrice,
+        dateModificationTt: new Date().toISOString()
       },
       {
         produitId: 3,
-        prixBase: this.condensatPrice,
-        dateModificationPb: new Date().toISOString()
+        tarifTransport: this.condensatPrice,
+        dateModificationTt: new Date().toISOString()
       },
       {
         produitId: 4,
-        prixBase: this.gplPrice,
-        dateModificationPb: new Date().toISOString()
+        tarifTransport: this.gplPrice,
+        dateModificationTt: new Date().toISOString()
       }
     ];
     

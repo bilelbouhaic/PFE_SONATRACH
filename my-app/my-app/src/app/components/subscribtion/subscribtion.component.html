@@ -1,23 +1,31 @@
+<app-myheader [pageTitle]="'Ajouter un nouveau compte'"></app-myheader>
 <section>
   <div class="content" role="main">
     <img src="../../../assets/Pictures/sonatrach.png" alt="">
     
     <div>
-      <label for="email">Email</label>
+      <label for="email">Email</label><br>
       <input id="email" [(ngModel)]="registerDto.email" name="email" required type="email" />
     </div>
     <div>
-      <label for="password">Password</label>
+      <label for="password">Password</label><br>
       <input id="password" [(ngModel)]="registerDto.password" name="password" required type="password" />
     </div>
     <div>
-      <label for="role">Role</label>
+      <label for="role">Role</label><br>
       <select id="role" [(ngModel)]="registerDto.role" name="role">
         <option value="Fiscaliste">Fiscaliste</option>
         <option value="Admin">Admin</option>
         <option value="User">User</option>
       </select>
     </div>
-    <button (click)="register(registerDto)">S'inscrire</button>
+    <button (click)="register(registerDto)">Ajouter un nouveau compte</button>
+
+    <div *ngIf="successMessage" class="success-message">
+      <span>{{ successMessage }}</span>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      <span>{{ errorMessage }}</span>
+    </div>
   </div>
 </section>

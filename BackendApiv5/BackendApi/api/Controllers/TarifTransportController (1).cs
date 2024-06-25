@@ -44,7 +44,7 @@ namespace api.Controllers
                 var newTT = new TarifTransport
                 {
                     tarifTransport = dto.tarifTransport,
-                    dateModificationTt = dto.dateModificationTt,
+                    dateModificationTt = DateOnly.FromDateTime(DateTime.Now),
                     ProduitId = dto.ProduitId
                 };
 

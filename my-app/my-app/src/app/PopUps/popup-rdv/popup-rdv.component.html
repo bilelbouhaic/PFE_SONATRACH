@@ -1,37 +1,26 @@
-<!-- popup-dialog.component.html -->
-
 <div class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
-    <div class="popupContainer">
+  <div class="popupContainer">
       <!-- Your popup content here -->
-     
-      
-          <h1 class="popupH1">Calcul redevance</h1>
-          <hr class="popupHr">
-          <form  class="popupForm" action="">
-            <div class="popupDiv">
+      <h1 class="popupH1">Calcul redevance</h1>
+      <hr class="popupHr">
+      <form class="popupForm" action="">
+          <div class="popupDiv">
               <p class="popupP">Etat du P1</p>
-              <select class="popupInput" name="etatRdv" [(ngModel)]="etatRdv" id="" required>
+              <select class="popupInput" name="etatRdv" [(ngModel)]="etatRdv" id="" required (change)="updateCurrentDate()">
                   <option value="Definitive">Definitive</option>
                   <option value="Provisoire">Provisoire</option>
               </select>
-            </div>
-            
-            <div class="popupDiv">
-            <p class="popupP">Periode en cours</p>
-            <input class="popupInput" type="date" name="currentDate"  [(ngModel)]="currentDate"  />
-            <!-- <input class="popupInput" type="text" [(ngModel)]="currentDate" [value]="currentDate"  /> -->
+          </div>
+          <div class="popupDiv">
+              <p class="popupP">Periode en cours</p>
+              <input class="popupInput" type="date" name="currentDate" [(ngModel)]="currentDate" />
           </div>
           <div class="popupButtonContainer">
               <button class="popupButtonAnnuler" (click)="closePopup()">Fermer</button>
               <button class="popupButton" (click)="calculateRdv()">Calculer la redevance</button>
           </div>
-            
           <div *ngIf="successMessage" class="popupMessage success">{{ successMessage }}</div>
           <div *ngIf="errorMessage" class="popupMessage error">{{ errorMessage }}</div>
-          </form>
-      
-       
-        
-    </div>
+      </form>
   </div>
-  
+</div>

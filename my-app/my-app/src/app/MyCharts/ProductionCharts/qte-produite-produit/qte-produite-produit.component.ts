@@ -12,6 +12,7 @@ import { DataCubeService1 } from './qte-produite-produit.service';
 export class QteProduiteProduitComponent implements OnInit {
   data: any;
   options: any;
+  
 
   constructor(private dataCubeService: DataCubeService1, private dateService:DateService ) {}
 

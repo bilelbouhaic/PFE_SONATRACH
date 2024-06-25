@@ -9,6 +9,9 @@ import { JwtAuth } from './jwtAuth';
   providedIn: 'root'
 })
 export class AuthenticationService {
+  getCurrentUserRoles() {
+    throw new Error('Method not implemented.');
+  }
   registerUrl = "http://localhost:5286/api/AuthManagement/Register";
   loginUrl = "http://localhost:5286/api/AuthManagement/Login";
   wilayaUrl = "http://localhost:5286/api/WilayaDate";
@@ -36,8 +39,9 @@ export class AuthenticationService {
     if (token) {
       const payload = token.split('.')[1];
       const decodedPayload = JSON.parse(atob(payload));
-      return decodedPayload.role; // Assumes the role is in the payload
+      return decodedPayload.role; // Assurez-vous que le rôle est correctement extrait du payload du JWT
     }
     return null;
   }
+  
 }

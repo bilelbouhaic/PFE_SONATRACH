@@ -4,37 +4,28 @@ import { MyService } from './popup-rdv.service';
 @Component({
   selector: 'app-popup-rdv',
   templateUrl: './popup-rdv.component.html',
-  styleUrl: './popup-rdv.component.css',
+  styleUrls: ['./popup-rdv.component.css'],  // Updated from styleUrl to styleUrls
 })
 export class PopupRdvComponent {
-  [x: string]: any;
-
   @Output() close = new EventEmitter<void>();
 
   successMessage: string = '';
-  date:string = '';
+  date: string = '';
   errorMessage: string = '';
   currentDate: string = '';
   etatRdv: string = '';
 
   constructor(private myService: MyService) {
-     const date = new Date();
-     const year = date.getFullYear();
-     const month = ('0' + (date.getMonth() )).slice(-2); // Ajoute un zéro devant si le mois est inférieur à 10
-     const day = 10;
-     this.currentDate = `${year}-${month}-${day}`;
+    this.updateCurrentDate();  // Initialize the currentDate based on the initial etatRdv value
   }
+
   closePopup() {
     this.close.emit();
   }
 
   calculateRdv() {
-     if (!this.isDateValid()) {
-      alert("Délai dépassé. Impossible de calculer TRP.");
-      return;
-    }
-    console.log(this.etatRdv,this.currentDate);
-    
+    console.log(this.etatRdv, this.currentDate);
+
     const data = {
       typeRdv: this.etatRdv,
       dateRdv: this.currentDate,
@@ -46,31 +37,31 @@ export class PopupRdvComponent {
       (response) => {
         this.successMessage = 'Opération réussie !';
         this.errorMessage = '';
-        console.log(response); // Gérer la réponse ici
-        if ((response = 200)) {
+        console.log(response);
+        if (response === 200) {
           console.log(this.successMessage);
         }
-
-        // Fermer le popup seulement si l'opération a réussi
-        this.closePopup();
       },
-
       (error) => {
         this.successMessage = '';
         this.errorMessage = "Une erreur s'est produite. Veuillez réessayer.";
-        console.error(error); // Gérer l'erreur ici
+        console.error(error);
       }
     );
   }
 
-  isDateValid(): boolean {
-    const currentDate = new Date();
-    const selectedDateParts = this.currentDate.split('/');
-    const selectedYear = parseInt(selectedDateParts[2]);
-   const selectedMonth = parseInt(selectedDateParts[1]) - 1; // Les mois commencent à partir de zéro
-    const selectedDay = parseInt(selectedDateParts[0]);
+  updateCurrentDate() {
+    const date = new Date();
+    let monthOffset = -1; // Default to "Provisoire"
+    if (this.etatRdv === 'Definitive') {
+      monthOffset = -2;
+    }
 
-    const selectedDate = new Date(selectedYear, selectedMonth, selectedDay);
-    return currentDate <= selectedDate;
-   }
+    date.setMonth(date.getMonth() + monthOffset);
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2); // Months are 0-indexed in JavaScript
+    const day = '10'; // Fixed day as per your requirement
+
+    this.currentDate = `${year}-${month}-${day}`;
+  }
 }
