@@ -12,6 +12,8 @@ export class PopupTarifTransComponent {
   gazPrice: number = 0;
   condensatPrice: number = 0;
   gplPrice: number = 0;
+  successMessage: string = '';
+  errorMessage: string = '';
 
   constructor(private myService: MyService) {}
 
@@ -42,13 +44,16 @@ export class PopupTarifTransComponent {
         dateModificationTt: new Date().toISOString()
       }
     ];
-    
     this.myService.postData(data).subscribe(response => {
-      console.log(response); // Gérer la réponse ici
-
-      
-
+      this.successMessage = 'Mise à jour effectuée avec succès !';
+      this.errorMessage = '';
+     
+    }, error => {
+      this.successMessage = '';
+      this.errorMessage = 'Une erreur s\'est produite. Veuillez réessayer.';
+      console.error(error); 
     });
+
   }
 
 }

@@ -26,6 +26,9 @@
                 <input class="popupInput" type="number" name="gplPrice" id="gplPrice" [(ngModel)]="gplPrice" required />
                 <input type="hidden" name="gplProductId" value="4" />
             </div>
+            <div *ngIf="successMessage" class="popupMessage success">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="popupMessage error">{{ errorMessage }}</div>
+            
           
             <div class="popupButtonContainer">
                 <button class="popupButtonAnnuler" (click)="closePopup()">Fermer</button>

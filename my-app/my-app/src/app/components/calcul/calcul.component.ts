@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleRight, faBottleDroplet, faDollar, faFileCsv, faGasPump, faOilCan } from '@fortawesome/free-solid-svg-icons';
 import { DataService } from './data.service';
 import { Router } from '@angular/router';
 
@@ -10,6 +10,12 @@ import { Router } from '@angular/router';
 })
 export class CalculComponent {
   icon = faArrowCircleRight;
+
+  dollar=faDollar;
+   gas= faGasPump;
+   oil=faBottleDroplet;
+   file=faFileCsv;
+
   isPopupVisible: boolean = false;
   isTrpPopupVisible: boolean = false;
   isBilanPopupVisible: boolean = false;

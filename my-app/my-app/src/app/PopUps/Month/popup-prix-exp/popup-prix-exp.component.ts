@@ -48,18 +48,13 @@ export class PopupPrixExpComponent {
     ];
 
     this.myService.postData(data).subscribe(response => {
-      this.successMessage = 'Opération réussie !';
-        //this.errorMessage = '';
-        //console.log(response); // Gérer la réponse ici
-        // Fermer le popup seulement si l'opération a réussi
-        this.closePopup();
-    },
-
-    error => {
+      this.successMessage = 'Mise à jour effectuée avec succès !';
+      this.errorMessage = '';
+     
+    }, error => {
       this.successMessage = '';
       this.errorMessage = 'Une erreur s\'est produite. Veuillez réessayer.';
-      console.error(error); // Gérer l'erreur ici
-    }
-  );
+      console.error(error); 
+    });
   }
 }

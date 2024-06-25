@@ -51,7 +51,7 @@ export class PopupPrixMNComponent {
         //this.errorMessage = '';
         //console.log(response); // Gérer la réponse ici
         // Fermer le popup seulement si l'opération a réussi
-        this.closePopup();
+     
     },
 
     error => {

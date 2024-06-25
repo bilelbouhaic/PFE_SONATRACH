@@ -23,14 +23,19 @@ span{
 }
 h4{
     color: black;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     
 }
 h5{
     color: #92959E;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     margin-bottom: 10px;
     
+}
+
+.icon{
+    color: white ;
+    font-weight: bold;
 }

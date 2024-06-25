@@ -17,10 +17,16 @@
             <p class="popupP">Periode en cours</p>
             <input class="popupInput" type="text" [(ngModel)]="currentDate" [value]="currentDate" />
           </div>
+          <div *ngIf="successMessage" class="success">
+            {{ successMessage }}
+          </div>
+          <div *ngIf="errorMessage" class="error">
+            {{ errorMessage }}
+          </div>
           
           
           <div class="popupButtonContainer">
-              <button class="popupButtonAnnuler" (click)="closePopup()" >Annuler</button>
+              <button class="popupButtonAnnuler" (click)="closePopup()" >Fermer</button>
               <button class="popupButton " type="submit" (click)="sendData()">Mettre a jour</button>
               
           </div>

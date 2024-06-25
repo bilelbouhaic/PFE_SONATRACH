@@ -11,7 +11,8 @@ export class PopupTauxChComponent {
 
   tauxCh: number = 0;
   currentDate: string;
-
+  successMessage: string = '';
+  errorMessage: string = '';
   closePopup() {
     this.close.emit();
   }
@@ -32,10 +33,13 @@ export class PopupTauxChComponent {
     ];
 
     this.myService.postData(data).subscribe(response => {
-      console.log(response); // Gérer la réponse ici
-
-      this.close.emit();
-
+      this.successMessage = 'Mise à jour effectuée avec succès !';
+      this.errorMessage = '';
+     
+    }, error => {
+      this.successMessage = '';
+      this.errorMessage = 'Une erreur s\'est produite. Veuillez réessayer.';
+      console.error(error); 
     });
   }
 }

@@ -38,9 +38,9 @@ namespace api.Controllers
             decimal prixBPetrole = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "petrole")?.prixBase ?? 0;
             decimal prixBGaz = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "gaz")?.prixBase ?? 0;
             decimal prixBCondensat = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "condensat")?.prixBase ?? 0;
-            decimal prixBGpl = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "GPL")?.prixBase ?? 0;
+            decimal prixBGpl = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "Gpl")?.prixBase ?? 0;
 
-             decimal Date = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "GPL")?.prixBase ?? 0;
+             decimal Date = prixBases.LastOrDefault(pb => pb.Produit?.nomProduit == "Gpl")?.prixBase ?? 0;
 
             // Prepare the DTO with the retrieved values
             var response = new ProductionMonnaieDto

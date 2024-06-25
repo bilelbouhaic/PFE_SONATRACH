@@ -1,35 +1,35 @@
-<app-myheader  [pageTitle]="'Calcul taxe'"></app-myheader>
+<app-myheader  [pageTitle]="'Calcul des taxes'"></app-myheader>
 
 
 <section class="Container">
     <div class="Buttons">
         <ul>
-            <app-mybutton (click)="navigateToUpdate()" [buttonText]="'Mise a jour des donnees'"></app-mybutton>  
-            <app-mybutton (click)="togglePopup('popup')" [buttonText]="'Calculer redevance '"></app-mybutton> 
-            <app-mybutton (click)="togglePopup('trpPopup')"  [buttonText]="'Calculer TRP'"></app-mybutton>  
-            <app-mybutton (click)="togglePopup('bilanPopup')" [buttonText]="'Generer un bilan'"></app-mybutton> 
+            <app-mybutton (click)="navigateToUpdate()" [buttonText]="'Mise à  jour des données'"></app-mybutton>  
+            <app-mybutton (click)="togglePopup('popup')" [buttonText]="'Calculer la redevance '"></app-mybutton> 
+            <app-mybutton (click)="togglePopup('trpPopup')"  [buttonText]="'Calculer la TRP'"></app-mybutton>  
+            <app-mybutton (click)="togglePopup('bilanPopup')" [buttonText]="'Génerer un bilan'"></app-mybutton> 
         </ul>
     </div>
     
     <div class="lastUpdates">
         <h2>Vos dernieres modifications</h2>
         <div class="Elements">
-            <app-last-update  [valeur]="lastUpdateData.tauxChange"  [subTitle]="'Taux de change'"     [couleur]="'#18A0FB'"/> 
+            <app-last-update  [valeur]="lastUpdateData.tauxChange"  [subTitle]="'Taux de change'"  [icone]="dollar"     [couleur]="'#06AA00'"/> 
             
         </div>
         <br>
         <h3>Prix d'exportation :</h3> 
         <div class="Elements">
-            <app-last-update [valeur]="lastUpdateData.prixBPetrole"   [subTitle]="'Petrole'"       [couleur]="'#BDBDBD'"/>
-            <app-last-update [valeur]="lastUpdateData.prixBGaz"   [subTitle]="'Gaz'"          [couleur]="'#BDBDBD'"/> 
-            <app-last-update [valeur]="lastUpdateData.prixBCondensat"   [subTitle]="'Condensat'"    [couleur]="'#BDBDBD'"/>
-            <app-last-update [valeur]="lastUpdateData.prixBGpl"   [subTitle]="'Gpl'"          [couleur]="'#BDBDBD'"/> 
+            <app-last-update [valeur]="lastUpdateData.prixBPetrole"   [subTitle]="'Pétrole'"  [icone]="gas"        [couleur]="'#979797'"/>
+            <app-last-update [valeur]="lastUpdateData.prixBGaz"   [subTitle]="'Gaz'"      [icone]="gas"     [couleur]="'#979797'"/> 
+            <app-last-update [valeur]="lastUpdateData.prixBCondensat"   [subTitle]="'Condensat'"  [icone]="gas"     [couleur]="'#979797'"/>
+            <app-last-update [valeur]="lastUpdateData.prixBGpl"   [subTitle]="'GPL'"     [icone]="gas"        [couleur]="'#979797'"/> 
         </div>
        
         <h3>Etat de production :</h3>
         <div class="Elements">       
-            <app-last-update [valeur]="'2024-04-15'"   [subTitle]="'Etat P1 Provisoir'"     [couleur]="'#FFF3B2'"/>
-            <app-last-update [valeur]="'2024-05-10'"   [subTitle]="'Etat P1 Definitif'"     [couleur]="'#06AA00'"/> 
+            <app-last-update [valeur]="'2024-04-15'"   [subTitle]="'État P1 provisoire'"  [icone]="file"      [couleur]="'#4595fd8f'"/>
+            <app-last-update [valeur]="'2024-05-10'"   [subTitle]="'État P1 définitif'" [icone]="file"       [couleur]="'#4594fd'"/> 
           
         </div>
         
