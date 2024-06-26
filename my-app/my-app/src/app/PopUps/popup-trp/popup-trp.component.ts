@@ -19,9 +19,11 @@ export class PopupTrpComponent {
     const date = new Date();
     const year = date.getFullYear();
     const month = ('0' + (date.getMonth() )).slice(-2); // Ajoute un zéro devant si le mois est inférieur à 10
+    const year1 = date.getFullYear();
+    const month1 = ('0' + (date.getMonth()+1 )).slice(-2); // Ajoute un zéro devant si le mois est inférieur à 10
     const day = 10;
     this.currentDate = `${year}-${month}-${day}`;
-    this.currentDate1 = `${year}-${month}`;
+    this.currentDate1 = `${year1}-${month1}`;
   }
   closeTrpPopup() {
     this.close.emit();

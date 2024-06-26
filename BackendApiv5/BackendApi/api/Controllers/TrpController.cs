@@ -50,7 +50,7 @@ namespace api.Controllers
                 }
 
                 // Ensure adjustedBaseRdv does not go negative
-                adjustedBaseRdv = Math.Max(adjustedBaseRdv, 0);
+                // adjustedBaseRdv = Math.Max(adjustedBaseRdv, 0);
 
                 // Calculate the montantTrp after adjustment
                 var montantTrp = CalculateMontantTrp(adjustedBaseRdv, targetTaux);

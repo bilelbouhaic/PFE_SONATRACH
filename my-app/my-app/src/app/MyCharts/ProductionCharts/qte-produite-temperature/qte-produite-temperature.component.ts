@@ -59,7 +59,7 @@ console.log(Adrar);
           },
           {
             label: 'Laghouat',
-            data: Laghouat,
+            data: [1137053,1125053,1121053,1118053,1118053,1107053,1108053,1105053,1112053,1109053,1137053,1137053],
             yAxisID: 'y-axis-2',
             borderColor: '#DADAFC',
             backgroundColor: '#DADAFC',
@@ -68,7 +68,7 @@ console.log(Adrar);
           },
           {
             label: 'Illizi',
-            data: Illizi,
+            data:  [1169053,1157053,1153053,1150053,1150053,1139053,1140053,1157053,1144053,1141053,1169053,1170053],
             yAxisID: 'y-axis-2',
             borderColor: '#4547A9',
             backgroundColor: '#4547A9',
